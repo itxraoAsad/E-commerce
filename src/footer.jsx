@@ -13,13 +13,13 @@ const Footer=()=>{
         <>
        <div className="bg-white flex  justify-center items-center  flex-wrap space-x-20 py-10">
          <div className="space-y-3 mt-2 ">
-              <div className=" flex  items-center space-x-2">
+              <div className=" flex  items-center space-x-2 max-[600px]:ml-21">
                             <FaShoppingBag className= "text-2xl "/>
                             <h1 className="text-2xl font-bold text-blue-400">Brand</h1>
                           </div>
-                          <h3 className="w-4/5 opacity-70">Best Information about the company gies here but now lorem ipsum is</h3>
-                          <div className="flex space-x-3">
-                         {/* <FaFacebook className="bg-gray-300"/> */}
+                          <h3 className="w-4/5 opacity-70 max-[600px]:ml-21">Best Information about the company gies here but now lorem ipsum is</h3>
+                          <div className="flex space-x-3 max-[600px]:ml-18">
+                         
                          <FaFacebook className="bg-gray-400 text-white p-1.5 text-3xl rounded-2xl"/>
 
                            <CiTwitter className="bg-gray-400 text-white p-1.5 text-3xl rounded-2xl" />

@@ -1,5 +1,9 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom';
+
 import WebListView from './weblistveiw';
 import Header from './header';
 import Nav from './nav';
@@ -10,7 +14,6 @@ import Grid3 from './grid3';
 import Footer from './footer';
 import ListPage from './listpage';
 import ProfilePage from './profilepage';
-
 
 function Layout() {
   return (
@@ -26,29 +29,29 @@ function Layout() {
   );
 }
 
-
-const router = createBrowserRouter([
-  
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+    },
+    {
+      path: '/weblistveiw',
+      element: <WebListView />,
+    },
+    {
+      path: '/listpage',
+      element: <ListPage />,
+    },
+    {
+      path: '/profilepage',
+      element: <ProfilePage />,
+    },
+  ],
   {
-    
-    path: '/',
-     
-    element: <Layout />,
-  },
-  {
-    path: '/weblistveiw',
-    element: <WebListView />,
-  },
-  {
-    path: '/listpage',
-    element: <ListPage />,
-  },
-
-   {
-    path: '/profilepage',
-    element: <ProfilePage />,
-  },
-]);
+    basename: '/E-commerce',
+  }
+);
 
 function App() {
   return <RouterProvider router={router} />;

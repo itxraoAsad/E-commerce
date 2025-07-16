@@ -11,47 +11,53 @@ const Header = () => {
   return (
     <div className="w-full bg-white border border-[#E7E7E7] py-4 px-4">
       <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+        {/* Brand */}
         <div className="flex items-center gap-2 justify-center">
-          <FaShoppingBag className="text-2xl" />
-          <h1 className="text-2xl font-bold text-blue-400">Brand</h1>
+          <FaShoppingBag className="text-xl sm:text-2xl" />
+          <h1 className="text-xl sm:text-2xl font-bold text-blue-400">Brand</h1>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-2 justify-center">
+        {/* Search */}
+        <div className="flex flex-col sm:flex-row items-center gap-2 justify-center w-full sm:w-auto">
           <input
             placeholder="Search"
-            className="border border-blue-600 px-2 py-1 rounded w-full sm:w-auto"
+            className="border border-blue-600 px-2 py-1 rounded w-full sm:w-48 md:w-60 text-sm"
           />
-          <select className="border border-blue-600 px-2 py-1 rounded text-sm">
+          <select className="border border-blue-600 px-2 py-1 rounded text-sm w-full sm:w-auto">
             <option>All Category</option>
           </select>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded text-sm">
+          <button className="bg-blue-600 text-white px-4 py-1 rounded text-sm w-full sm:w-auto">
             Search
           </button>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 text-sm mt-2 md:mt-0">
+        {/* Icons/Links */}
+        <div className="flex flex-wrap justify-center gap-3 text-xs sm:text-sm mt-2 md:mt-0 max-[400px]:flex-col max-[400px]:items-center">
           <Link to="/ProfilePage" className="flex items-center gap-1 text-blue-500">
-            <CgProfile size={20} />
+            <CgProfile size={18} />
             <h3>Profile</h3>
           </Link>
 
-          <div className="flex items-center gap-1">
-            <MdOutlineMessage size={20} />
+          <div className="flex items-center gap-1 text-gray-700">
+            <MdOutlineMessage size={18} />
             <h3>Message</h3>
           </div>
 
           <Link to="/listpage" className="flex items-center gap-1 text-blue-500">
-            <GiRoyalLove size={20} />
-            <h3>ListPage</h3>
+            <GiRoyalLove size={18} />
+            <h3>List</h3>
           </Link>
 
-          <div className="flex items-center gap-1">
-            <IoMdCart size={20} />
-            <h3>MyCart</h3>
+          <div className="flex items-center gap-1 text-gray-700">
+            <IoMdCart size={18} />
+            <h3>Cart</h3>
           </div>
 
-          <Link to="/" className="flex items-center gap-1 bg-blue-500 text-white px-3 py-1 rounded">
-            <IoHomeOutline size={20} />
+          <Link
+            to="/"
+            className="flex items-center gap-1 bg-blue-500 text-white px-3 py-1 rounded"
+          >
+            <IoHomeOutline size={18} />
             <span>Home</span>
           </Link>
         </div>

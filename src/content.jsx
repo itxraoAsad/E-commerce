@@ -57,29 +57,34 @@ const Content = () => {
             </div>
 
 
-
-            <div className='flex w-[90%] h-full rounded-2xl overflow-hidden m-10 '>
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    1            </div>
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    <img src={watch} alt="" />
-
-                </div>
-
-
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    <img className='w-full' src={laptop} alt="" />
-                </div>
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    <img className='w-full' src={ptop} alt="" />
-                </div>
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    <img src={camera} alt="" />
-                </div>
-                <div className=' transition-[flex] duration-500 ease-in-out flex-1 h-[100%] cursor-pointer hover:flex-3 border-2 borde-[#E0E0E0] w-[15%] aspect-square object-contain ml-4'>
-                    <img className='w-full' src={mobile} alt="" />
-                </div>
-            </div>
+<div className='flex flex-wrap md:flex-nowrap w-[90%] rounded-2xl overflow-hidden m-4 mx-auto'>
+  {[1, watch, laptop, ptop, camera, mobile].map((item, index) => (
+    <div
+      key={index}
+      className='
+        transition-[flex] duration-500 ease-in-out 
+        flex-1 
+        h-40 max-[400px]:h-32 md:h-full 
+        cursor-pointer hover:flex-[3] 
+        border-2 border-[#E0E0E0] 
+        m-2 
+        flex justify-center items-center
+        bg-white
+        max-[400px]:w-full
+      '
+    >
+      {typeof item === 'number' ? (
+        item
+      ) : (
+        <img
+          src={item}
+          alt=""
+          className='w-full h-full object-contain'
+        />
+      )}
+    </div>
+  ))}
+</div>
 
         </>
 
